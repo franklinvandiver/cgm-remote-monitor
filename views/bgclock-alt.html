@@ -133,11 +133,9 @@
 			var timeDivisor = (window.serverSettings.settings.timeFormat) ? window.serverSettings.settings.timeFormat : 12;
 			var today = new Date(),
 			h = today.getHours() % timeDivisor || timeDivisor,
-			m = today.getMinutes(),
-			s = today.getSeconds();
+			m = today.getMinutes();
 			if (m < 10) m = "0" + m;
-			if (s < 10) m = "0" + s;
-			$('#clock').text(h + ":" + m + ":" + s);
+			$('#clock').text(h + ":" + m);
 		}
 
 		function init ( ) {
