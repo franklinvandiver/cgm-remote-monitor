@@ -20,7 +20,7 @@
 	<style type="text/css">
 		
 		@font-face {
-    			font-family: 'bc';
+    			font-family: 'basic';
     			src: url('/font/bc.woff2') format('woff2'),
          		url('/font/bc.woff') format('woff');
    			font-weight: normal;
@@ -32,7 +32,7 @@
 			margin: 0 0;
 			padding: 0;
 			overflow: hidden;
-			font-family: 'bc';
+			font-family: 'basic';
 			color: white;
 			background-color: black;
 		}
@@ -130,12 +130,12 @@
 			$('#bgnow').toggleClass('stale', (now - last > threshold));
 
 			// Generate and insert the clock.
-			// var timeDivisor = (window.serverSettings.settings.timeFormat) ? window.serverSettings.settings.timeFormat : 12;
-			// var today = new Date(),
-			// h = today.getHours() % timeDivisor || timeDivisor,
-			// m = today.getMinutes();
-			// if (m < 10) m = "0" + m;
-			// $('#clock').text(h + ":" + m);
+			var timeDivisor = (window.serverSettings.settings.timeFormat) ? window.serverSettings.settings.timeFormat : 12;
+			var today = new Date(),
+			h = today.getHours() % timeDivisor || timeDivisor,
+			m = today.getMinutes();
+			if (m < 10) m = "0" + m;
+			$('#clock').text(h + ":" + m);
 		}
 
 		function init ( ) {
