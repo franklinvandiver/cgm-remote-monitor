@@ -66,6 +66,7 @@ function create(env, ctx) {
     });
 
     var appPages = {
+	"/bgclock-ag.html":"bgclock-ag.html",
         "/bgclock-alt.html":"bgclock-alt.html",
         "/clock-color.html":"clock-color.html",
         "/admin":"adminindex.html",
